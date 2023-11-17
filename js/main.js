@@ -1,3 +1,8 @@
+let playerState = 'idle'
+const animationsDropdown = document.getElementById('animations')
+
+animationsDropdown.addEventListener('change', (e) => playerState = e.target.value)
+
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 
@@ -10,7 +15,6 @@ playerImage.src = 'assets/shadow_dog.png'
 const spriteWidth = 575
 const spriteHeight = 523
 const staggerFrames = 5
-let playerState = 'idle'
 
 const spriteAnimations = createSpriteAnimations(spriteWidth, spriteHeight)
 
